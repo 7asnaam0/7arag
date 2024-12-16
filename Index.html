@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .nav {
+            background-color: #f8f9fa;
+        }
+        .first_nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .first_nav ul li {
+            font-size: 18px;
+        }
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+        body {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #F8F9FA;
+        }
+        .images img{
+            width: 150px;
+
+        }
+        .icons i,p{
+            color: #212529;
+        }
+        .icoo{
+            display: flex;
+            justify-content: space-between;
+        }
+        .pics{
+          display: flex;
+          flex-wrap: wrap;
+           
+            
+        }
+
+        .pics img{
+            width: 120px;
+            margin: 1px;
+        }
+
+      
+    </style>
+</head>
+<body>
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light nav">
+        <div class="container fir-nav">
+        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> الرئيسة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-car"></i> حراج السيارات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-paw"></i> مواشي وحيوانات وطيور</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-couch"></i> أثاث</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i> البحث</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-concierge-bell"></i> خدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-list"></i> اقسام اكثر</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+       
+    </nav>
+
+    <nav class="navbar navbar-dark bg-dark fir-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Icons on the left -->
+            <a href="#" class="navbar-brand text-white">
+                <img src="Images/lo.png" alt="">
+            </a>
+            <div class="d-flex">
+                
+           
+                <button class="btn btn-sm btn-outline-light m-1">
+                    <i class="fas fa-moon toggle-icon " id="darkModeToggle" title="Toggle Dark Mode"></i>
+                </button>
+                
+                <div class="dropdown me-2 m-1">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-language"></i> En
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">عربي</a></li>
+                    </ul>
+                </div>
+                  <!-- Login Icon -->
+                  <button class="btn btn-sm btn-outline-light ms-3 m-1">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </div>
+            <!-- Logo on the right -->
+            
+        </div>
+    </nav>
+  
+  </header>
+
+    <section> 
+        <nav class="navbar navbar-light bg-light">
+            <div class="container d-flex justify-content-space-evenly">
+                <div class="row w-100" style="display: flex; justify-content: space-evenly;">
+                    <!-- Left: Select Dropdown -->
+                    <div class="col-4">
+                        <select class="form-select" aria-label="الكل">
+                            <option selected>الكل</option>
+                            <option value="1">Electronics</option>
+                            <option value="2">Furniture</option>
+                            <option value="3">Clothing</option>
+                        </select>
+                    </div>
+    
+                    <!-- Center: Search Box -->
+                    <div class="col-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="البحث عن سلعة" aria-label="Search">
+                            <button class="btn " type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- Right: Add Product Icon -->
+                    <div class="col-4 text-end mt-1">
+                        أضف اعلانك
+                        <i class="fas fa-plus-circle " style="font-size: 1.5rem;" title="Add Product">
+                          
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- القسم الفارغ مع تقسيم الأعمدة -->
+<div class="text-white py-3 icons">
+    <div class="container">
+        <div class="row">
+                <!-- العمود الثاني (1/3) -->
+                <div class="col-md-4 text-center text-center " >
+                   <div class="ser p-2"  style="background-color:white;">
+                    <i class="fas fa-search fa-2x"></i>
+                   </div>
+
+                  
+                    <div class="icon_ mt-2" style="display: flex; justify-content: space-between; background-color:white; color: #212529;  ">
+                        <div class="text p-1">
+                            <h3>تصفية</h3>
+                        </div>
+                        <i class="fa fa-plus p-3"></i>
+                    </div>
+                
+                    <div class="icon_ mt-2" style="display: flex; justify-content: space-between; background-color:white; color: #212529;  ">
+                        <div class="text p-1">
+                            <h3>تنقل سريع</h3>
+                        </div>
+                        <i class="fa fa-minus p-3"></i>
+                    </div>
+
+                    <div class="pics mt-3">
+                        <img src="Images/app.jpg" alt="">
+                        <img src="Images/infinix-brand-logo-phone-symbol-name-green-design-china-mobile-illustration-free-vector.jpg" alt="">
+                        <img src="Images/Huawei-Logo-2006.png" alt="">
+                        <img src="Images/sum.png" alt="">
+                        <img src="Images//1200px-OPPO_Logo_wiki.png" alt="">
+                        <img src="Images/ىه.avif" alt="">
+
+
+                    </div>
+
+                    <div class="icon_ mt-2" style="display: flex; justify-content: space-between; background-color:white; color: #212529;  ">
+                        <div class="text p-1">
+                            <h3> عرض المزيد</h3>
+                        </div>
+                        <i class="fa fa-caret-down p-3"></i>
+                    </div>
+
+                </div>
+
+             
+
+
+
+                   <!-- العمود الثاني (2/3) -->
+           
+            <div class="col-md-8 text-center text-md-end mb-3 mb-md-0">
+        <!-- Horizontal Scrollable Categories Section -->
+                <div class="container my-4">
+                    <div class="categories-wrapper" style="overflow-x: auto; display: flex; padding: 10px;">
+                        <!-- Category Item -->
+                <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                    <i class="fas fa-car fa-3x icon"></i>
+                    <p>حراج السيارات</p>
+                </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-home fa-3x "></i>
+                        <p>حراج العقار</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-mobile-alt fa-3x "></i>
+                        <p>حراج الأجهزة</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-dog fa-3x "></i>
+                        <p>مواشي وحيوانات وطيور</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-couch fa-3x "></i>
+                        <p>اثاث</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-tshirt fa-3x "></i>
+                        <p>مستلزمات شخصية</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-briefcase fa-3x "></i>
+                        <p>وظائف</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-utensils fa-3x "></i>
+                        <p>اطعمة ومشروبات</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-code fa-3x "></i>
+                        <p>برمجة وتصاميم</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-book fa-3x "></i>
+                        <p>مكتبة وفنون</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-binoculars fa-3x "></i>
+                        <p>صيد ورحلات</p>
+                    </div>
+
+                    <div class="category-item" style="flex-shrink: 0; width: 100px; text-align: center; margin-right: 20px;">
+                        <i class="fas fa-plus fa-3x "></i>
+                        <p>كل الحراج</p>
+                    </div>
+                </div>
+           </div>
+          
+           <div class="sec-sec" style="display: flex;">
+            <div class="col-4">
+                <select class="form-select" aria-label="الكل">
+                    <option selected>كل المناطق</option>
+                    <option value="1">Electronics</option>
+                    <option value="2">Furniture</option>
+                    <option value="3">Clothing</option>
+                </select>
+            </div>
+        
+          <div class="location m-1 outline" style="color: #212529; font-size:20px">
+          <i class="fas fa-map-marker-alt fa-1x"></i> القريب
+          </div>
+
+
+        </div>
+
+        <section class=" h-custom m-5" >
+            <div class="container py-5 ">
+          
+          
+                          <div class="card mb-3 ">
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                  <div>
+                                    <img
+                                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                      class="img-fluid rounded-3  m-3" alt="Shopping item" style="width: 65px;">
+                                  </div>
+                                  <div class="ms-3">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p class="small mb-0">256GB, Navy Blue</p>
+                                    <div class="icoo">
+                                       
+                                        <div class="div m-2"> <i class="fa-solid fa-heart p-1"></i>2</div>
+                                        <div class="div m-2">  <i class="fa-solid fa-bell p-1"></i>قبل ساعتين</div>
+                                     
+                                    </div>
+                                  </div>
+
+                                  
+                                </div>
+                            
+                                
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card mb-3 ">
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                  <div>
+                                    <img
+                                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                      class="img-fluid rounded-3  m-3" alt="Shopping item" style="width: 65px;">
+                                  </div>
+                                  <div class="ms-3">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p class="small mb-0">256GB, Navy Blue</p>
+                                    <div class="icoo">
+                                       
+                                        <div class="div m-2"> <i class="fa-solid fa-heart p-1"></i>2</div>
+                                        <div class="div m-2">  <i class="fa-solid fa-bell p-1"></i>قبل ساعتين</div>
+                                     
+                                    </div>
+                                  </div>
+
+                                  
+                                </div>
+                            
+                                
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="card mb-3 ">
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                  <div>
+                                    <img
+                                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                      class="img-fluid rounded-3  m-3" alt="Shopping item" style="width: 65px;">
+                                  </div>
+                                  <div class="ms-3">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p class="small mb-0">256GB, Navy Blue</p>
+                                    <div class="icoo">
+                                       
+                                        <div class="div m-2"> <i class="fa-solid fa-heart p-1"></i>2</div>
+                                        <div class="div m-2">  <i class="fa-solid fa-bell p-1"></i>قبل ساعتين</div>
+                                     
+                                    </div>
+                                  </div>
+
+                                  
+                                </div>
+                            
+                                
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="card mb-3 ">
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                  <div>
+                                    <img
+                                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                      class="img-fluid rounded-3  m-3" alt="Shopping item" style="width: 65px;">
+                                  </div>
+                                  <div class="ms-3">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p class="small mb-0">256GB, Navy Blue</p>
+                                    <div class="icoo">
+                                       
+                                        <div class="div m-2"> <i class="fa-solid fa-heart p-1"></i>2</div>
+                                        <div class="div m-2">  <i class="fa-solid fa-bell p-1"></i>قبل ساعتين</div>
+                                     
+                                    </div>
+                                  </div>
+
+                                  
+                                </div>
+                            
+                                
+                              </div>
+                            </div>
+                          </div>
+          
+                    
+          
+           </div>
+          </section>
+        
+        
+       
+
+        <!-- row end  -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="before-foot" style="display: flex; justify-content: center;">
+        <div class="images">
+            <img src="Images/app-store.webp" alt="">
+            <img src="Images/app-store.webp" alt="">
+            <img src="Images/huawei-badge.webp" alt="">
+        </div>
+    </div>
+    
+    <footer class="bg-dark py-4" >
+        <div class="container">
+            <div class="row   text-end">
+                <!-- First Column -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-white">الخدمات</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-user-plus me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">تسجيل</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-store me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">الاشتراك السنوي للمتجر</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-certificate me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">توثيق العضوية و إضافة التراخيص</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-tags me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">نظام الخصم</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-question-circle me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">الأسئلة الشائعة</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Second Column -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-white">الدعم والمساعدة</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-wallet me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">حساب و سداد رسوم الموقع</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-eye me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">زيادة مشاهدات العروض</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-shield-alt me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">مركز الأمان</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-ban me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">الحسابات والأرقام الموقوفة</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-user-shield me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">سياسة الخصوصية</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Third Column -->
+                <div class="col-md-4 mb-3" >
+                    <h5 class="text-white">معلومات أخرى</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-bullhorn me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">الإعلانات المميزة</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-handshake me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">اتفاقية الاستخدام</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-star me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">نظام التقييم</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-times-circle me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">قائمة السلع والإعلانات الممنوعة</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2 text-light bg-dark p-2 rounded-circle"></i> 
+                            <span class="text-light">اتصل بنا</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="after-foot">
+        <div class="bg-dark py-3">
+            <div class="container text-center">
+                <h5 class="text-white mb-3">تابعنا على وسائل التواصل الاجتماعي</h5>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-white bg-primary p-3 rounded-circle" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white bg-info p-3 rounded-circle" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white bg-danger p-3 rounded-circle" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white bg-success p-3 rounded-circle" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="text-white bg-primary p-3 rounded-circle" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-white bg-secondary p-3 rounded-circle" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="last-foot">
+        <div class=" py-3 text-center">
+            <div class="container text-end text-center">
+                <p class="mb-0">مؤسسة موقع حراج لتقنية المعلومات</p>
+                <p class="mb-0">N9.0.38 , 11/26/2024</p>
+                <p class="mb-0">الرقم الضريبي: 300710482300003</p>
+            </div>
+        </div>
+    </div>
+
+ 
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
